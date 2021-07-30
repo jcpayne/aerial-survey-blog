@@ -4,6 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
+I'm jus zis guy, you know?
 This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
 
 
