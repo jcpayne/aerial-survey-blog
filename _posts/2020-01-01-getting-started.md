@@ -16,11 +16,11 @@ Microsoft's cloud computing architecture, Azure, like Amazon's AWS or the Google
 4. Deployment is a _specialty_.  There are people called "DevOps engineers" who do nothing but figure out how to scale up software.  I recommend easing yourself gradually into it; don't assume that you need it at first.  It's pretty amazing what you can accomplish with a single, cheap VM.  Also ask yourself seriously what your endpoint is.  Do you really need to maintain a website with a backend model and database infrastructure, or can you get by sharing a VM with teammates, or producing batch results from time to time?  When you eventually do start to need something bigger, Azure has all of the tools you'll need to run multiple containers with Kubernetes, to recover from interrupted jobs, distribute your data, build pipelines, expose web endpoints, and so on (ditto for Amazon and Google, of course).
 5. AML accounts and permissions are a big headache, just like with AWS.  I've had to switch between accounts, copy data and remake virtual machines at least 6 times, and have also been shut out of accounts for a total of more than two months over the last two years by a combination of issues that included some serious technical support problems.  That's a _lot_ of wasted time, and makes you yearn for the simplicity of working on a local machine.  But working in the cloud is inevitable and Azure's services are as good as any.
 
-![]({{ site.imageurl }}/AML workspace.png)
+![]({{ site.imageurl }}/blog_images/AML workspace.png)
 An AML workspace integrates a lot of different machine learning functionality (image from Microsoft)
 
 # Keeping track of code
 As I built one VM after another and switched back and forth between accounts, I started realizing that I had a seriously tangled mess of code to keep track of.  My primary need was to keep the versions of code in sync between all of the machines I worked on, which included a laptop and 3 or 4 remote VMs on different accounts.  Working with collaborators was a secondary concern.  I fell back on [git](https://git-scm.com/) and Github, the world standard.  Git is superb but it is not simple; as someone once said, you never really stop learning how to use it.  My solution was to create a private Github repository for keeping my own mess straight, sync it with each of the remote machines, and then push a clean master copy from that repository to another repository that I shared with Howard.  It's been a great system, but I have to remember to always pull from the central repository before beginning work on a new machine, and to push to it before shutting down a machine.
 
-![]({{ site.imageurl }}/my_git_workflow.png)
+![]({{ site.imageurl }}/blog_images/my_git_workflow.png)
 My git workflow
