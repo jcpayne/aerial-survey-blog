@@ -1,11 +1,12 @@
 ---
 title: Getting started, and some things I wish I had known
 toc: true
+author: John Payne
 ---
 
 
 # Finding a model
-As we began the project, the first question was "Which model should we use?"  In my long science career, I've never participated in a field that is moving as fast as AI.  It is nearly a full-time job just to stay up to date with research.  So I read a pile of papers and settled on [TridentNet](https://github.com/facebookresearch/detectron2/tree/master/projects/TridentNet/), a recent variant of a model called [Detectron2](https://github.com/facebookresearch/detectron2) that was created by Facebook Research.  I figured it would be yesterday's news soon enough, but it seemed to have the right balance between achieving state-of-the-art results and being mature enough to make deployment possible.  
+As we began the project, the first question was "Which model should we use?"  I've never participated in a scientific field that is moving as fast as AI is.  It is nearly a full-time job just to stay up to date with research.  So I read a pile of papers and settled on [TridentNet](https://github.com/facebookresearch/detectron2/tree/master/projects/TridentNet/), a recent variant of a model called [Detectron2](https://github.com/facebookresearch/detectron2) that was created by Facebook Research.  I figured it would be yesterday's news soon enough, but it seemed to have the right balance between achieving state-of-the-art results and being mature enough to make deployment possible.  
 
 # Getting started in the cloud
 Microsoft's cloud computing architecture, Azure, like Amazon's AWS or the Google Cloud, has a huge variety of offerings aimed at everyone from individuals to the multinational companies that are the world's heaviest data users.  The AI4E program was very helpful in getting me oriented to Azure's machine learning offerings.  The lessons I learned were:
