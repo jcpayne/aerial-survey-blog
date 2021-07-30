@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://jcpayne.github.io/aerial-survey-blog/2020/01/01/Microsoft-Word-Example-Post.html</loc>
-<lastmod>2020-01-01T00:00:00-06:00</lastmod>
-</url>
-<url>
 <loc>https://jcpayne.github.io/aerial-survey-blog/2020/01/01/getting-started.html</loc>
 <lastmod>2020-01-01T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://jcpayne.github.io/aerial-survey-blog/jupyter/2020/02/20/test.html</loc>
-<lastmod>2020-02-20T00:00:00-06:00</lastmod>
+<loc>https://jcpayne.github.io/aerial-survey-blog/2020/07/10/building-the-model.html</loc>
+<lastmod>2020-07-10T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://jcpayne.github.io/aerial-survey-blog/fastpages/jupyter/2020/02/21/introducing-fastpages.html</loc>
-<lastmod>2020-02-21T00:00:00-06:00</lastmod>
+<loc>https://jcpayne.github.io/aerial-survey-blog/2021/02/11/training-and-sharing-results.html</loc>
+<lastmod>2021-02-11T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://jcpayne.github.io/aerial-survey-blog/fastcore/</loc>
-<lastmod>2020-09-01T00:00:00-05:00</lastmod>
+<loc>https://jcpayne.github.io/aerial-survey-blog/2021/03/26/slow-inference-and-kazakhstan.html</loc>
+<lastmod>2021-03-26T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://jcpayne.github.io/aerial-survey-blog/fastlinkcheck/</loc>
-<lastmod>2020-11-17T00:00:00-06:00</lastmod>
+<loc>https://jcpayne.github.io/aerial-survey-blog/2021/06/30/classification-model.html</loc>
+<lastmod>2021-06-30T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://jcpayne.github.io/aerial-survey-blog/2021/07/30/project-overview.html</loc>
