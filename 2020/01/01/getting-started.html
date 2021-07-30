@@ -11,11 +11,11 @@
   <li>AML accounts and permissions are a big headache, just like with AWS.  I’ve had to switch between accounts, copy data and remake virtual machines at least 6 times, and have also been shut out of accounts for a total of more than two months over the last two years by a combination of issues that included some serious technical support problems.  That’s a <em>lot</em> of wasted time, and makes you yearn for the simplicity of working on a local machine.  But working in the cloud is inevitable and Azure’s services are as good as any.</li>
 </ol>
 
-<p><img src="blog_images/AML workspace.png" alt="" />
+<p><img src="/images/blog_images/AML workspace.png" alt="" />
 An AML workspace integrates a lot of different machine learning functionality (image from Microsoft)</p>
 
 <h1 id="keeping-track-of-code">Keeping track of code</h1>
 <p>As I built one VM after another and switched back and forth between accounts, I started realizing that I had a seriously tangled mess of code to keep track of.  My primary need was to keep the versions of code in sync between all of the machines I worked on, which included a laptop and 3 or 4 remote VMs on different accounts.  Working with collaborators was a secondary concern.  I fell back on <a href="https://git-scm.com/">git</a> and Github, the world standard.  Git is superb but it is not simple; as someone once said, you never really stop learning how to use it.  My solution was to create a private Github repository for keeping my own mess straight, sync it with each of the remote machines, and then push a clean master copy from that repository to another repository that I shared with Howard.  It’s been a great system, but I have to remember to always pull from the central repository before beginning work on a new machine, and to push to it before shutting down a machine.</p>
 
-<p><img src="blog_images/my_git_workflow.png" alt="" />
+<p><img src="images/blog_images/my_git_workflow.png" alt="" />
 My git workflow</p>
