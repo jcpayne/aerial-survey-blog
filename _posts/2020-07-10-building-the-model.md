@@ -11,6 +11,9 @@ I learned the hard way that the most difficult part of an AI project is assembli
 ## Building the TridentNet model
 Getting the TridentNet model to run was slow because Detectron2 has a variety of different implementations including bounding-box models, instance segmentation, keypoints, and so on, documentation is quite limited, and not that many people seem to use it (or perhaps they all knew what they're doing, unlike me).  Detectron2 has its own environment that includes 'registered' datasets, custom data loaders, multi-GPU management, internal logging, and so on.  The default training cycle was a bit clunkier than I wanted, and I realized early on that I'd need additional image augmentation, given that my sample size was relatively small.  It took time to figure out how to get Detectron2 training efficiently on multiple GPUs, and I added some other customizations, including fixing a routine that helped to balance the sample size across categories, bypassing an evaluation routine, passing in-memory tiles to a custom dataloader, adding an Adabound optimizer, and others.  Model customizations are in `trident_project/dev_packages/trident_dev/model.py`).  
 
+![]({{ site.imageurl }}/blog_images/whole_image.png)
+![]({{ site.imageurl }}/blog_images/tiled_image.png)
+
 ## Learning to tile
 The current generation of GPUs can't handle full-sized images from modern cameras, so the first step in preparing an image for an AI model is almost always to resize it, making it much smaller and sacrificing a lot of resolution.  If the object of interest fills a large proportion of the image area, then that approach works perfectly well.  But in an aerial survey of livestock or wildlife, a small object like a goat or gazelle might only occupy 30 pixels in an image that could contain tens of millions of pixels.  That means we can't afford to resize the image and lose resolution.  The standard solution is to chop it into pieces, or 'tiles'.  
 
