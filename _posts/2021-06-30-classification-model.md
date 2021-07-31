@@ -4,6 +4,9 @@ toc: true
 author: John Payne
 ---
 
+![]({{ site.imageurl }}/blog_images/southern_ground-hornbill.jpg)
+Image credit: Tarique Sani (https://www.flickr.com/photos/tariquesani/6834426351/)
+
 ## Adding a classification model as a preliminary filter
 In desperation, I decided to add a multi-label classification model as a preliminary filter. The idea was that if it was accurate, it could be used to eliminate most of the empty tiles, thereby greatly reducing the workload on the slow Detectron2 model.  I chose a ResNet50 model from `fastai`, because a ResNet50 should be fast and fastai's training environment is superb.  
 
@@ -16,6 +19,10 @@ It was time to put the classification model to a more serious test.  I ran a bat
 The standard 'confusion table' method for assessing the output of a single-label classification model does not work in the multi-label case.  In a multi-label model, you never know whether an object was _missed_ (not detected at all), or _misclassified_ (detected, but classified as the wrong category).  I haven't found a good way to assess a multi-label model, but I wrote some code to try to separate missed from misclassified objects, as shown in the .  In the process, I discovered two surprising edge cases:
 1) Some tiles were not classified as anything.  No category _including the 'empty' category_ had a score that was higher than the detection threshold.  I named these predictions 'uncertain'.
 2) A few tiles were classified as both empty _and_ as containing an object.  That wasn't really a problem because we could just ignore the 'empty' classification in these cases.
+
+![]({{ site.imageurl }}/blog_images/CP1_4703_Ground_hornbill_0_5.jpg)
+
+This is a ground hornbill, flying.  The model recognized that it didn't belong to any of the categories it knew, but it also didn't look like an empty tile, so none of the category scores passed the detection threshold.  As a result, our rules classified the tile as "uncertain".  
 
 ### Is fastai's implementation of 'empty' a feature or a bug?
 Clearly, the fastai model's empty' category is not just a remainder that is created when the model fails to find any object in an image; it's actually a _learned_ category itself.  That architectural choice generates the strange edge cases that make counting results much harder.  But is it a bug or a feature?  
