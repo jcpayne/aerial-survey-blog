@@ -1,3 +1,9 @@
+---
+title: Training the model and sharing results
+toc: true
+author: John Payne
+---
+
 ## Training the model
 Once the training and validation sets were created, the model customization was working, and I had learned how to use AML, I trained the model fairly hard on an AML cluster with 4 GPUs.  The process did not go smoothly.  
 ### Fixing learning rate problems

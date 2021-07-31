@@ -1,3 +1,9 @@
+---
+title: Slow inference and a new application
+toc: true
+author: John Payne
+---
+
 ### Slow inference causes a traffic jam
 I was getting excited that we were ready to do inference and to finally deploy the model.  I took a deep dive into Azure DevOps, Kubernetes clusters and web endpoints, and got as far as running the model in a container (which required 'registering' the model, among other steps).  I was discouraged to find that it ran far too slowly, and upgrading the container with a GPU proved too difficult and expensive.  So I abandoned that approach and decided to stick with working on VMs for now. 
 

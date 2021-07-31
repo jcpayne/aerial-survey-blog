@@ -1,3 +1,10 @@
+---
+title: Building the TridentNet model
+toc: true
+author: John Payne
+---
+
+
 ## Assembling training and validation sets
 I learned the hard way that the most difficult part of an AI project is assembling the training and validation datasets.  Why?  Because you will almost certainly be assembling images _and_ annotations from a variety of sources in order to get a large enough sample size, a good balance between categories, and as large a diversity as possible of images-- including backgrounds, lighting, perspectives, and so on.  The images and annotations must match, or at a minimum, it has to be clear which images have been checked.  You will be astounded at how many things can go wrong; it is truly the Land of Edge Cases -- there was even one time where the images I received had been tiled to a different size, so I had to merge the input tiles back into full-size images before re-tiling them.  In short, I failed to insist on a high level of organization right off the bat, and I paid for it.  I make some recommendations for how to do it better in the `03_process_annotations.ipynb` notebook.
 

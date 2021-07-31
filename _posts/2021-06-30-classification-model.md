@@ -1,3 +1,9 @@
+---
+title: Creating a classification model
+toc: true
+author: John Payne
+---
+
 ## Adding a classification model as a preliminary filter
 In desperation, I decided to add a multi-label classification model as a preliminary filter. The idea was that if it was accurate, it could be used to eliminate most of the empty tiles, thereby greatly reducing the workload on the slow Detectron2 model.  I chose a ResNet50 model from `fastai`, because a ResNet50 should be fast and fastai's training environment is superb.  
 
