@@ -16,7 +16,8 @@ Our goal is to make aerial surveys easier to do, cheaper to analyze, and more ac
 ## Understanding aerial surveys
 ### Survey workflow
 An aerial survey is a complicated beast.  The goal is usually to obtain counts or density estimates, or possibly to measure indicators, for some objects of interest over a large area.  Howard and I drew this diagram together the other day, trying to picture all of the components.  The top band shows the overall workflow.  The rest of the diagram shows roughly what is needed for the object recognition box, which is only a small part of the total workflow.
-<img src="{ site.imageurl }}/blog_images/survey_workflow_overview.png" width="100%">
+![]({{ site.imageurl }}/blog_images/survey_workflow_overview.png){width: 100%}
+
 
 ### AI priorities are different for an aerial survey!
 The aim of an aerial wildlife or livestock survey is to estimate the numbers and spatial distribution of animals that are usually very rare (sometimes present in < 1% of all images), clumped together, and often half-hidden in forest or water environments.  The precision and accuracy of the density estimates ultimately depend on a number of different sources of error, but one of the top issues is that surveys rarely sample the entire area.
